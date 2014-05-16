@@ -12,19 +12,26 @@ function type() {
 function newLetter() {
     clearInterval(myInt);
     if(text[index] != undefined) {
-	var myTime = Math.random() * 400;
+	var myTime = Math.random() * 200;
 	if(text[index] == " ") {
 	    myTime = 0;
 	}
 	else if(text[index] == ",") {
-	    myTime = 1000;
+	    myTime = 600;
 	}
 	else if(text[index] == ".") {
-	    myTime = 1500;
+	    myTime = 1000;
 	}
-	box.innerHTML += text[index];
-	index++;
-	//text = text.substr(1);
+	if(Math.random() < 0.92) {
+	    box.innerHTML += text[index];
+	    index++;
+	}
+	else {
+	    if(index > 0) {
+		box.innerHTML = box.innerHTML.substr(0,box.innerHTML.length-1);
+		index--;
+	    }
+	}
 	myInt = setInterval(newLetter, myTime);
     }
     else {

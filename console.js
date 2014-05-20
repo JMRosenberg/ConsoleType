@@ -30,6 +30,7 @@ function newLetter() {
 	    if(index > 0) {
 		box.innerHTML = box.innerHTML.substr(0,box.innerHTML.length-1);
 		index--;
+		myTime = 600;
 	    }
 	}
 	myInt = setInterval(newLetter, myTime);

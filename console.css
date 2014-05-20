@@ -14,6 +14,6 @@ p {
     border-color: #00CCFF;
     border-radius: 4px;
     padding: 5px;
-    text-align: center;
+    /*text-align: center;*/
     box-shadow: 10px 10px 5px #004466
 }
